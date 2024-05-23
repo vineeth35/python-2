@@ -1,0 +1,21 @@
+
+num_values = int(input("Enter how many values you want to read: "))
+a = []
+print("Enter the values of array 'a':")
+for i in range(num_values):
+    value = int(input("Enter the value of a[{}]: ".format(i)))
+    a.append(value)
+b = []
+print("Enter the values of array 'b':")
+for i in range(num_values):
+    value = int(input("Enter the value of b[{}]: ".format(i)))
+    b.append(value)
+are_equal = True
+for i in range(num_values):
+    if a[i] != b[i]:
+        are_equal = False
+        break
+if are_equal:
+    print("Both arrays are equal")
+else:
+    print("Both arrays are not equal")
