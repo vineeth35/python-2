@@ -1,0 +1,23 @@
+import math
+n = int(input("Enter array size: "))
+if n <= 0:
+    print("Invalid input")
+else:
+    arr = list(map(int, input("Enter array elements: ").split()))
+
+
+    def is_perfect_square(num):
+        root = int(math.sqrt(num))
+        return root * root == num
+
+    largest_non_perfect_square = -1
+
+  
+    for num in arr:
+        if not is_perfect_square(num) and num > largest_non_perfect_square:
+            largest_non_perfect_square = num
+
+    if largest_non_perfect_square == -1:
+        print(-1)
+    else:
+        print(largest_non_perfect_square)
