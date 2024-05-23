@@ -1,0 +1,15 @@
+
+num_elements = int(input("Enter the number of elements: "))
+numbers = []
+print("Enter the numbers:")
+for i in range(num_elements):
+    number = float(input("Enter number {}: ".format(i + 1)))
+    numbers.append(number)
+largest = smallest = numbers[0]
+for number in numbers:
+    if number > largest:
+        largest = number
+    elif number < smallest:
+        smallest = number
+print("Largest number:", largest)
+print("Smallest number:", smallest)
