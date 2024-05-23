@@ -1,0 +1,16 @@
+
+size1, size2 = map(int, input("Enter size of first and second arrays: ").split())
+if size1 <= 0 or size2 <= 0:
+    print("Invalid array sizes")
+else:
+    arr1 = list(map(int, input("Enter first array elements: ").split()))
+    arr2 = list(map(int, input("Enter second array elements: ").split()))
+
+  
+    max_element_arr1 = max(arr1)
+
+    min_element_arr2 = min(arr2)
+
+  
+    print("max element in first array is", max_element_arr1, "and min element in second array is", min_element_arr2)
+    print("The product of these two is", max_element_arr1 * min_element_arr2)
