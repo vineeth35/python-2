@@ -1,0 +1,19 @@
+
+num_elements = int(input("Enter the number of elements: "))
+numbers = []
+print("Enter the numbers:")
+for i in range(num_elements):
+    number = float(input("Enter number {}: ".format(i + 1)))
+    numbers.append(number)
+print("Numbers in the array:", numbers)
+insert_num = float(input("Enter the number to insert: "))
+insert_index = int(input("Enter the position to insert (1-indexed): "))
+numbers.insert(insert_index - 1, insert_num)
+print("After insertion, numbers in the array:", numbers)
+delete_index = int(input("Enter the position to delete (1-indexed): "))
+if 1 <= delete_index <= len(numbers):
+    deleted_num = numbers.pop(delete_index - 1)
+    print("Deleted number:", deleted_num)
+    print("After deletion, numbers in the array:", numbers)
+else:
+    print("Invalid position for deletion.")
