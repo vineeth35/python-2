@@ -1,0 +1,10 @@
+
+n = int(input("Enter array size: "))
+if n <= 0:
+    print("Invalid input")
+else:
+    arr = list(map(int, input(f"Enter {n} elements: ").split()))
+
+    total_subsets = 2 ** n
+
+    print(total_subsets)
