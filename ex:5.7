@@ -1,0 +1,13 @@
+
+num_values = int(input("Enter how many values you want to read: "))
+arr = []
+for i in range(num_values):
+    value = int(input("Enter the value of a[{}]: ".format(i)))
+    arr.append(value)
+for i in range(num_values - 1):
+    for j in range(i + 1, num_values):
+        if arr[i] > arr[j]:
+            arr[i], arr[j] = arr[j], arr[i]
+print("Array sorted in ascending order:", end=" ")
+for value in arr:
+    print(value, end=" ")
