@@ -1,0 +1,19 @@
+
+size = int(input("Enter the size of the array: "))
+arr = []
+print("Enter the elements of the array:")
+for i in range(size):
+    element = input("Enter element {}: ".format(i + 1))
+    arr.append(element)
+
+search_element = input("Enter the element to search: ")
+
+found = False
+for i in range(size):
+    if arr[i] == search_element:
+        print("Element '{}' found at position {}.".format(search_element, i + 1))
+        found = True
+        break
+
+if not found:
+    print("Element '{}' not found in the array.".format(search_element))
